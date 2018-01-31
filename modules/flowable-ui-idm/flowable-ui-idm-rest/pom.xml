@@ -6,43 +6,43 @@
 	<artifactId>flowable-ui-idm-rest</artifactId>
 	<parent>
 		<groupId>org.flowable</groupId>
-    	<artifactId>flowable-ui-idm</artifactId>
-    	<version>6.3.0-SNAPSHOT</version>
+		<artifactId>flowable-ui-idm</artifactId>
+		<version>6.3.0-SNAPSHOT</version>
 	</parent>
 	<packaging>jar</packaging>
 
 	<dependencies>
-	
-        <dependency>
-            <groupId>org.flowable</groupId>
-            <artifactId>flowable-ui-idm-logic</artifactId>
-        </dependency>
+
+		<dependency>
+			<groupId>org.flowable</groupId>
+			<artifactId>flowable-ui-idm-logic</artifactId>
+		</dependency>
 
 		<!-- Flowable -->
 		<dependency>
-            <groupId>org.flowable</groupId>
-            <artifactId>flowable-idm-engine</artifactId>
-        </dependency>
+			<groupId>org.flowable</groupId>
+			<artifactId>flowable-idm-engine</artifactId>
+		</dependency>
 
 		<!-- LOGGING -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 		</dependency>
-        
+
 		<!-- JSON -->
 		<dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-        </dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+		</dependency>
 		<dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-        </dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
 		<dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-        </dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.datatype</groupId>
 			<artifactId>jackson-datatype-json-org</artifactId>
@@ -67,13 +67,13 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
-  			<artifactId>commons-lang3</artifactId>
+			<artifactId>commons-lang3</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 		</dependency>
-		
+
 		<!-- SPRING -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -92,15 +92,15 @@
 			<artifactId>spring-webmvc</artifactId>
 		</dependency>
 		<dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-core</artifactId>
-        </dependency>
-	   
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<!-- BUILD -->
 	<build>
-	
+
 		<plugins>
 			<plugin>
 				<groupId>org.zeroturnaround</groupId>
@@ -116,7 +116,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
@@ -127,8 +127,8 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		
-		
+
+
 		<pluginManagement>
 			<plugins>
 				<!--This plugin's configuration is used to store Eclipse m2e settings 
@@ -166,7 +166,7 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-	
+
 	<profiles>
 		<profile>
 			<id>distro</id>
@@ -179,6 +179,10 @@
 						<executions>
 							<execution>
 								<id>attach-sources</id>
+								<configuration>
+									<additionalparam>-Xdoclint:none</additionalparam>
+									<failOnError>false</failOnError>
+								</configuration>
 								<phase>package</phase>
 								<goals>
 									<goal>jar-no-fork</goal>

@@ -7,6 +7,8 @@
 	<property name="flowable.version" value="6.3.0-SNAPSHOT" />
 	<property name="target.distro.root" value="target/zip/flowable-${flowable.version}" />
 	<property name="flowable.website" value="../../flowable-website" />
+	
+	<property name="nodocs" value="true" />
 
 	<condition property="mvn.executable" value="mvn.bat" else="mvn">
 		<os family="windows" />
@@ -16,7 +18,7 @@
 		<not>
 			<or>
 				<!-- Flowable supports java 7 as minimum -->
-				<equals arg1="${ant.java.version}" arg2="1.7" />
+				<equals arg1="${ant.java.version}" arg2="1.8" />
 			</or>
 		</not>
 	</condition>
