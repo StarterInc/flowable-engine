@@ -1,4 +1,4 @@
-Flowable (V6)
+Starter Ignite: Flowable (V6)
 ========
 
 [Maven Central:  
@@ -11,7 +11,11 @@ Flowable (V6)
 	![license](https://img.shields.io/hexpm/l/plug.svg)](https://github.com/flowable/flowable-engine/blob/master/LICENSE)
 
 
-Homepage: http://flowable.org/
+Starter Homepage: http://starter.io/
+
+Flowable Homepage: http://flowable.org/
+
+## This is the repo for the Starter Ignite fork of the Flowable BPM engine. Starter Ignite adds custom encryption and security related features to the base Flowable platform, some fixes and ease of use enhancements, and a pluggable adapter mechanism to make it easier to add functionality to the Flowable engine.
 
 ## flowable / flowəb(ə)l /
 * a compact and highly efficient workflow and Business Process Management (BPM) platform for developers, system admins and business users.
@@ -32,9 +36,11 @@ The Flowable downloads can be found on http://flowable.org/downloads.html.
 
 The distribution contains most of the sources as jar files. The source code of Flowable can be found on https://github.com/flowable/flowable-engine.
 
-### JDK 7+
+### JDK 8+
 
-Flowable runs on a JDK higher than or equal to version 7. Go to http://www.oracle.com/technetwork/java/javase/downloads/index.html and click on button "Download JDK".  There are installation instructions on that page as well. To verify that your installation was successful, run "java -version" on the command line.  That should print the installed version of your JDK.
+Starter Ignite Flowable runs on a JDK higher than or equal to version 8. Go to http://www.oracle.com/technetwork/java/javase/downloads/index.html and click on button "Download JDK".  There are installation instructions on that page as well. To verify that your installation was successful, run "java -version" on the command line.  That should print the installed version of your JDK.
+
+## Currently we are in private development mode until such time as our changes are ready for public consumption. In the meantime, please refer to the Flowable core project:
 
 ### Contributing
 
